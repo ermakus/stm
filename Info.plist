@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>iTorrent</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ermak.torrent.plugin</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BitTorrent Download Plugin</string>
+	<key>CFBundlePackageType</key>
+	<string>WBPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0</string>
+	<key>NSPrincipalClass</key>
+	<string>PluginView</string>
+	<key>WebPluginDescription</key>
+	<string>BitTorrent Downloader Plug-in</string>
+	<key>WebPluginMIMETypes</key>
+	<dict>
+		<key>application/x-bittorrent</key>
+		<dict>
+			<key>WebPluginExtensions</key>
+			<array>
+				<string>torrent</string>
+			</array>
+			<key>WebPluginTypeDescription</key>
+			<string>torrent File</string>
+			<key>WebPluginTypeEnabled</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>WebPluginName</key>
+	<string>BitTorrent Downloader Plug-in</string>
+</dict>
+</plist>

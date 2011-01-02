@@ -1,0 +1,12 @@
+Package: com.ermak.torrent.plugin
+Name: Torrent Downloader Safari Plugin
+Version: 0.46.beta
+Architecture: iphoneos-arm
+Description: Mobile Safari plugin that allow download torrents directly from browser
+Homepage: http://itorrent.ermak.us/
+Depiction: http://itorrent.ermak.us/depiction
+Maintainer: Anton Ermak <anton@ermak.us>
+Author: Anton Ermak <anton@ermak.us>
+Section: Application Networking
+Depends: mobilesubstrate
+

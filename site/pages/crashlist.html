@@ -1,0 +1,11 @@
+<html>
+<body>
+{% for crash in report %}
+<pre>
+Device: {{ crash.device }}
+-------------------------------
+{{ crash.xml }}
+</pre>
+{% endfor %}
+</body>
+</html>

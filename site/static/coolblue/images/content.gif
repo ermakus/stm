@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <title>Vosao CMS - Login page</title>
+
+    <link rel="stylesheet" href="/static/css/jquery-ui/redmond/jquery-ui.css" type="text/css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" language="javascript"></script>
+    <script src="/static/js/jquery-ui.js" language="javascript"></script>
+    <script src="/static/js/jsonrpc.js" language="javascript"></script>
+
+    <script src="/i18n.js" language="javascript"></script>
+    <script src="/static/js/vosao.js" language="javascript"></script>
+    <script src="/static/js/cms.js" language="javascript"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+
+    <link rel="stylesheet" href="/static/css/login.css" type="text/css" />
+    <script type="text/javascript">loggedIn = false;</script>
+    <script type="text/javascript" src="/static/js/cms/login.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+</head>
+<body>
+
+<div id="loading" style="display: none">Loading...</div>
+
+<div id="topbar">
+    <div id="rightmenu" style="margin-right: 30px">
+        
+
+<a id="languageSelect" href="#">Language</a>
+<div id="languageDiv">
+    <a href="#" onclick="Vosao.changeLanguage('en')">English</a>
+    <a href="#" onclick="Vosao.changeLanguage('ru')">Русский</a>
+</div>    </div>
+    <span class="clear">&#160;</span>
+</div>
+
+<div id="wrapper">
+    
+
+
+
+    
+<div id="content">
+<div id="memo">
+    <img src="/static/images/login-logo.jpg" />
+    <p>Sign in to change site content.</p>
+    <p>Visit <a target="blank" href="http://www.vosao.org">www.vosao.org</a> to get more information about Vosao CMS.</p>
+    <p>If you found a bug please open an issue on project <a target="blank" href="http://code.google.com/p/vosao/issues">Issue Tracker</a></p>
+    <p>Join the community by accessing our <a target="blank" href="http://groups.google.com/group/vosao-cms-development">Forum</a></p>
+</div>
+
+<div id="login-form">
+<form onsubmit="onLogin(); return false;">
+
+<h4>Sign in with your</h4>
+<h3>Vosao CMS account</h3>
+
+<div class="form-row">
+    <label>Email</label>
+    <input type="text" id="loginEmail" />
+</div>
+<div class="form-row">
+    <label>Password</label>
+    <input type="password" id="loginPassword" />
+</div>
+<div id="login-messages"> </div>
+<div class="buttons-dlg">
+    <input type="submit" value="Login" />
+    <br/>
+    <br/>
+    <a href="#" id="forgot">Forgot password</a>
+</div>    
+
+</form>
+</div>
+
+<div class="clear"> </div>
+
+<div class="version">
+  <span>Vosao CMS Version 0.6.7</span>
+</div>
+
+</div>
+
+<div class="messages"> </div>
+
+<div id="forgot-dialog" style="display:none" title="Forgot password">
+  <form id="forgotForm">
+    <p style="margin-bottom: 20px;">Please enter your email. Vosao CMS will send you a letter with authorization link where you can change your password.</p>
+    <div class="form-row">
+        <label style="width: 80px;">Email</label>
+        <input type="text" id="email" />
+    </div>
+    <div class="buttons-dlg">
+        <input type="submit" value="OK" />
+        <input id="forgotCancelButton" type="button" value="Cancel" />
+    </div>
+  </form>
+</div>
+
+
+</div>
+
+</body>
+</html>

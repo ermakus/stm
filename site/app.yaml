@@ -1,0 +1,68 @@
+application: ermakrepo
+version: 1
+runtime: python
+api_version: 1
+default_expiration: "1h"
+handlers:
+
+- url: /static
+  static_dir: static
+
+- url: /Packages.bz2
+  static_files: cydia/Packages.bz2
+  upload: cydia/Packages.bz2
+  mime_type: application/x-bzip2
+
+- url: /TorrentPlugin.deb
+  static_files: cydia/TorrentPlugin.deb
+  upload: cydia/TorrentPlugin.deb
+  mime_type: application/x-deb
+
+- url: /Release
+  static_files: cydia/Release
+  upload: cydia/Release
+  mime_type: text/plain
+
+- url: /plugin.html
+  static_files: pages/plugin.html
+  upload: pages/plugin.html
+
+- url: /depiction
+  static_files: pages/plugin.html
+  upload: pages/plugin.html
+
+- url: /sitemap.xml
+  static_files: sitemap.xml
+  upload: sitemap.xml
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /
+  script: wcgi.py
+
+- url: /index.html
+  script: wcgi.py
+
+- url: /faq
+  script: wcgi.py
+
+- url: /donate
+  script: wcgi.py
+
+- url: /banner
+  script: wcgi.py
+
+- url: /crashreport
+  script: wcgi.py
+
+- url: /bugreport
+  script: wcgi.py
+
+- url: /crashlist
+  script: wcgi.py
+
+- url: /changelist
+  script: wcgi.py
+

@@ -1,0 +1,9 @@
+Origin: Ermak iPhone/iPad repository
+Label: Ermak Repository
+Suite: stable
+Version: 1.0
+Codename: tangelo
+Architectures: iphoneos-arm
+Components: main
+Description: Repository for BitTorrent downloader plugin
+

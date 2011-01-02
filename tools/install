@@ -1,0 +1,18 @@
+#/bin/sh
+set -e
+echo "Preparing cydia package"
+rm -rf /tmp/cydia
+mkdir -p "/tmp/cydia/TorrentPlugin/System/Library/Internet Plug-Ins/Torrent.webplugin"
+mkdir -p "/tmp/cydia/TorrentPlugin/DEBIAN"
+cp -v DEBIAN/* /tmp/cydia/TorrentPlugin/DEBIAN/
+cp -v iTorrent Info.plist ./res/*.png "/tmp/cydia/TorrentPlugin/System/Library/Internet Plug-Ins/Torrent.webplugin"
+#arm-apple-darwin9-strip "/tmp/cydia/TorrentPlugin/System/Library/Internet Plug-Ins/Torrent.webplugin/iTorrent"
+cp -v tools/* /tmp/cydia
+cd /tmp/cydia
+dpkg -b TorrentPlugin
+dpkg-scanpackages -m . /dev/null >Packages
+bzip2 -f Packages
+cd -
+cp -v /tmp/cydia/*.deb site/cydia
+cp -v /tmp/cydia/Packages.bz2 site/cydia
+#appcfg.py update site
