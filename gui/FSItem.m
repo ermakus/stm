@@ -1,11 +1,3 @@
-//
-//  FSItem.m
-//  FSWalker
-//
-//  Created by Nicolas Seriot on 17.08.08.
-//  Copyright 2008 Sen:te. All rights reserved.
-//
-
 #import "FSItem.h"
 
 @implementation FSItem
