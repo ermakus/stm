@@ -1,4 +1,30 @@
-BitPlug is plugin for mobile safari that allow to download torrent files on Apple devices (iPhone/iPad/etc)
+Safari Torrent Manager
+======================
 
-You can find it on Cydia with name "Torrent Downloader Safari Plugin"
- 
+Safari Torrent Manager (STM) is plugin for mobile safari that allow to download torrent files on Apple devices (iPhone/iPad/etc)
+You can find it in Cydia with name "Torrent Downloader Safari Plugin"
+
+Build
+=====
+
+I've develop this plugin on Linux with iOS toolchain (see http://code.google.com/p/iphonedevonlinux/wiki/Installation).
+To build STM you also need installed cmake and libcurl
+
+    $ cmake .
+    $ make
+
+
+Deploy to repository
+====================
+
+I am use Google App Engine to host cydia repository (look at 'site' folder). To create your own, you need to:
+
+1. Change application id in site/app.yaml
+
+2. Run make to prepare .deb package:
+
+    $ make install
+
+3. Go to 'site' folder and upload .deb to app engine:
+
+    $ appcfg.py update

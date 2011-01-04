@@ -13,11 +13,7 @@
  */
 
 #import "PluginView.h"
-#import "CrashReportSender.h"
 #import "FSItem.h"
-
-#define CRASH_REPORTER_URL [NSURL URLWithString:@"http://cydia.ermak.us/crashreport"]
-#define BUY_URL [NSURL URLWithString:@"http://cydia.ermak.us/buy.html"]
 
 @class DOMElement;
 
@@ -68,7 +64,6 @@ void CppListener::error(const char* msg) {
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) 
     {
-        [[CrashReportSender sharedCrashReportSender] sendCrashReportToURL:CRASH_REPORTER_URL delegate:nil activateFeedback:YES];
         self.torrent = ITorrent::create( new CppListener( self ) ); 
         self.frame = frame;
 	lastState = !self.torrent->isRunning();
